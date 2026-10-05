@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['興趣', '喜愛程度'],
+                ['打羽球', 5],
+                ['玩遊戲', 4],
+                ['聽音樂', 3]
+            ]);
+
+            var options = {
+                title: '我的興趣統計'
+            };
+
+            var chart = new google.visualization.PieChart(
+                document.getElementById('myChart')
+            );
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+</style>
+
+<body>
+
+    <h1>我的第一個網頁</h1>
+    <p>歡迎來到我的網頁！</p>
+</div>
+
+<div class="content">
+
+    <h2>自我介紹</h2>
+    <p>大家好，我是方子昂。</p>
+
+    <h2>我的興趣</h2>
+
+    <ul>
+        <li>打羽球</li>
+        <li>玩遊戲</li>
+        <li>聽音樂</li>
+    </ul>
+
+    <img src="badminton.webp"
+         alt="羽球圖片"
+         width="500">
+
+    <h2>我的學校生活</h2>
+
+    <p>
+        我目前正在學習網頁設計，希望可以做出自己的網站。
+    </p>
+
+    <h2>我常用的網站</h2>
+
+    <a href="https://www.google.com"
+       target="_blank">
+       前往 Google
+    </a>
+
+    <br><br>
+
+    <button onclick="alert('你好！歡迎來到我的網頁！')">
+        按我一下
+    </button>
+
+    <h2>我的統計圖表</h2>
+
+    <div id="myChart"
+         style="width:100%; max-width:600px; height:500px;">
+    </div>
+
+</body>
+
+</html>
